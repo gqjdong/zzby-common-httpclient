@@ -61,38 +61,4 @@
       </dependency>
 
   </dependencies>
-
-    <build>
-        <plugins>
-            <!-- 要将源码放上去，需要加入这个插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar-no-fork</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
-    <!-- 配置远程发布到私服，mvn deploy -->
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>nexus-dev-releases</name>
-            <url>http://nexus.dev.zzby.com:8081/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>nexus-dev-snapshots</name>
-            <url>http://nexus.dev.zzby.com:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
 </project>
